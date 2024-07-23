@@ -45,7 +45,7 @@ function generateListItems(seperator, items) {
         let encoded_value = value.toString().replace(/&/g, '&amp;');
         
         let key = generatekey();
-        let li = `<item key="${key}" code="${key}" >${encoded_value.trim()}</item>`;
+        let li = `<item key="${key}" code="${key}">${encoded_value.trim()}</item>`;
         list_items.push(li);
     });
     for(item in list_items) {
