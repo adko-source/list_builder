@@ -28,11 +28,11 @@ function createDropdownList(label, list, tag="cons", global=false, required=fals
     return content;
 };
 
-function generateListItems(seperator, items) {
+function generateListItems(items) {
     let list = ``;
     let content_arr;
     let list_items = [];
-    // Function accepts a file of comma separated vals
+    
     if(typeof items === 'string') {
         let content = fs.readFileSync(__dirname + `/${items}`, 'utf8');
         content_arr = content.split('\n');
