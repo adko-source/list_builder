@@ -6,7 +6,7 @@ const file = fs.createWriteStream(__dirname + `/form_list.xml`, {
     'encoding': 'utf8',     
 });
 
-createDropdownList('My List', 'list1.txt', 'cons', true, true);
+createDropdownList('My List', 'list1.txt', 'cons', false, false);
 
 
 function createDropdownList(label, list, tag="cons", global=false, required=false, width="350") {
