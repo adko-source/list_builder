@@ -10,7 +10,7 @@ createDropdownList('My List', 'list1.txt', 'cons', false, false);
 
 
 function createDropdownList(label, list, tag="cons", global=false, required=false, width="350") {
-    let list_items = generateListItems(',', list);
+    let list_items = generateListItems(list);
     // Create unique key
     let key = generatekey();
     keys.add(key);
@@ -37,7 +37,7 @@ function generateListItems(items) {
         let content = fs.readFileSync(__dirname + `/${items}`, 'utf8');
         content_arr = content.split('\n');
     }
-    else { // or an array
+    else { 
         content_arr = items;
     };
     content_arr.forEach((value) => {
