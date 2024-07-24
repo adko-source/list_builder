@@ -22,7 +22,11 @@ function createDropdownList(label, list, tag="cons", global=false, required=fals
     file.write(content + '\r\n', (error) => {
             if(error) {
             return console.log(error.message)
-            };
+            }
+            else
+            {
+                return console.log('form_list.xml created');
+            }
     });
     
     return content;
